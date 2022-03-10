@@ -8,5 +8,10 @@ else
   echo "site: ${ProxySite}"
 fi
 
+sed -e "/^#/d"\
+    -e "s/\${PORT}/${PORT}/g"\
+    -e "$s"\
+    /conf/nginx.template.conf > /etc/nginx/nginx.conf
+
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
