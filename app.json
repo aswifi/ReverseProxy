@@ -1,0 +1,16 @@
+{
+  "name": "ReverseProxy",
+  "logo": "https://www.nginx.com/wp-content/uploads/2019/10/favicon-64x46.ico",
+  "description": "ReverseProxy",
+  "keywords": ["RP","Heroku"],
+  "env": {    
+    "ProxySite": {
+      "description": "填写网站地址即可反代网站，例如：baidu.com；不填写表示使用默认静态页面。",
+      "value": "",
+      "required": true
+        }
+     },
+  "website": "",
+  "repository": "",
+  "stack": "container"
+ }
