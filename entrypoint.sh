@@ -8,8 +8,7 @@ else
   echo "site: ${ProxySite}"
 fi
 
-sed -e "/^#/d"\
-    -e "s/\${PORT}/${PORT}/g"\
+sed -e "s/\${PORT}/${PORT}/g"\
     -e "$s"\
     /conf/nginx.template.conf > /etc/nginx/conf.d/ray.conf
 echo /etc/nginx/conf.d/ray.conf
